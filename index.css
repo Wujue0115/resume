@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400&display=swap");
+
+:root {
+  --dark-color: #181818;
+  --white-color: #ffffff;
+
+  --primary-color: #181825;
+  --secondary-color: #ffe8d1;
+
+  --background-color: #000000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid #fa0; */
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Nunito", "Noto Sans TC", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.25rem;
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+    /* orphans: 4;
+    widows: 2; */
+  }
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  page-break-inside: avoid;
+}
+
+#resume {
+  width: 793px;
+  height: 1122px;
+  min-width: 793px;
+  min-height: 1122px;
+  display: flex;
+  background-color: var(--white-color);
+}
+
+#left-pane {
+  width: 35%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+#left-pane .title {
+  padding: 0 0 0.5rem;
+  margin: 2.5rem 0 1rem;
+  width: 100%;
+  border-bottom: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+#left-pane h2 {
+  margin-bottom: 0.5rem;
+}
+
+#header {
+  width: 100%;
+  padding: 1rem 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--secondary-color);
+}
+
+#headshot {
+  width: 80%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  border: 2px solid var(--secondary-color);
+}
+
+#contact-pane {
+  width: 100%;
+}
+
+#contact-pane > .item {
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+#contact-pane > .item span {
+  margin-left: 1rem;
+}
+
+#skill-pane {
+  width: 100%;
+}
+
+#skill-pane > .item {
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+#right-pane {
+  width: 65%;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--primary-color);
+}
+
+#right-pane .dot {
+  margin: 0.5rem 1rem 0.5rem 0.5rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+#right-pane .title {
+  padding: 0 0 0.25rem;
+  margin: 1.5rem 0 0.5rem;
+  width: 100%;
+  border-bottom: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+#right-pane h2 {
+  margin-bottom: 0.5rem;
+}
+
+#right-pane .title:first-child {
+  margin-top: 1rem;
+}
+
+#education-pane,
+#contest-pane {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#education-pane > .timeline {
+  margin: 0 1.5rem;
+  padding: 0.5rem 0;
+  width: 2px;
+  height: calc(100% - 1rem - 2.2rem - 5px);
+  background-color: var(--primary-color);
+}
+
+#education-pane > .box > .item,
+#contest-pane > .box > .item {
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+#education-pane > .box > .item::before,
+#contest-pane > .box > .item::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  transform: translateX(-1.5rem) translateX(-1px) translateX(-50%);
+}
+
+#education-pane > .box > .item .item-title {
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+}
+
+#education-pane > .box > .item .item-sub-title,
+#contest-pane > .box > .item .item-sub-title {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+#contest-pane > .timeline {
+  /* Because width will being squeezed by right space, it need to add a flex-shrink property */
+  flex-shrink: 0;
+  margin: 0 1.5rem;
+  padding: 0.5rem 0;
+  width: 2px;
+  height: calc(100% - 1rem - 4.5rem);
+  background-color: var(--primary-color);
+}
+
+#contest-pane > .box > .item .item-title {
+  font-size: 1.1rem;
+}
