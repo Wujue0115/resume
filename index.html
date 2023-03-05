@@ -217,19 +217,19 @@
         resume.style.height = height + "px";
       };
 
-      window.addEventListener("load", (event) => {
-        resetResumeSize();
-      });
-      window.addEventListener("resize", (event) => {
-        resetResumeSize();
-      });
+      // window.addEventListener("load", (event) => {
+      //   resetResumeSize();
+      // });
+      // window.addEventListener("resize", (event) => {
+      //   resetResumeSize();
+      // });
       window.addEventListener("beforeprint", (event) => {
-        setResumePrintSize();
-        container.style.display = "block";
+        // setResumePrintSize();
+        // container.style.display = "block";
       });
       window.addEventListener("afterprint", (event) => {
-        resetResumeSize();
-        container.style.display = "flex";
+        // resetResumeSize();
+        // container.style.display = "flex";
       });
     </script>
   </body>
